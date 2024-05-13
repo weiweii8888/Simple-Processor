@@ -1,0 +1,1 @@
+ncverilog TESTBED.v +define+ALL +access+rw  +notimingcheck

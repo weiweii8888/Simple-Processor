@@ -1,0 +1,123 @@
+wvResizeWindow -win $_nWave1 2454 234 1371 684
+wvConvertFile -win $_nWave1 -o \
+           "/home/raid7_2/user09/r09115/CO_project_release/SP.vcd.fsdb" \
+           "/home/raid7_2/user09/r09115/CO_project_release/SP.vcd"
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/raid7_2/user09/r09115/CO_project_release/SP.vcd.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/My_SP"
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/My_SP/clk} \
+{/TESTBED/My_SP/en_write} \
+{/TESTBED/My_SP/funct\[5:0\]} \
+{/TESTBED/My_SP/i} \
+{/TESTBED/My_SP/imm\[15:0\]} \
+{/TESTBED/My_SP/in_valid} \
+{/TESTBED/My_SP/inst\[31:0\]} \
+{/TESTBED/My_SP/inst_addr\[31:0\]} \
+{/TESTBED/My_SP/inst_r\[31:0\]} \
+{/TESTBED/My_SP/inst_w\[31:0\]} \
+{/TESTBED/My_SP/mem_addr\[11:0\]} \
+{/TESTBED/My_SP/mem_din\[31:0\]} \
+{/TESTBED/My_SP/mem_dout\[31:0\]} \
+{/TESTBED/My_SP/mem_wen} \
+{/TESTBED/My_SP/opcode\[5:0\]} \
+{/TESTBED/My_SP/out_valid} \
+{/TESTBED/My_SP/ra1\[4:0\]} \
+{/TESTBED/My_SP/ra2\[4:0\]} \
+{/TESTBED/My_SP/rd1\[31:0\]} \
+{/TESTBED/My_SP/rd2\[31:0\]} \
+{/TESTBED/My_SP/rd\[4:0\]} \
+{/TESTBED/My_SP/rs\[4:0\]} \
+{/TESTBED/My_SP/rst_n} \
+{/TESTBED/My_SP/rt\[4:0\]} \
+{/TESTBED/My_SP/shamt\[4:0\]} \
+{/TESTBED/My_SP/state_typ_r\[5:0\]} \
+{/TESTBED/My_SP/state_typ_w\[5:0\]} \
+{/TESTBED/My_SP/wa\[4:0\]} \
+{/TESTBED/My_SP/wd\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \
+           18 19 20 21 22 23 24 25 26 27 28 29 )} 
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/My_SP/clk} \
+{/TESTBED/My_SP/en_write} \
+{/TESTBED/My_SP/funct\[5:0\]} \
+{/TESTBED/My_SP/i} \
+{/TESTBED/My_SP/imm\[15:0\]} \
+{/TESTBED/My_SP/in_valid} \
+{/TESTBED/My_SP/inst\[31:0\]} \
+{/TESTBED/My_SP/inst_addr\[31:0\]} \
+{/TESTBED/My_SP/inst_r\[31:0\]} \
+{/TESTBED/My_SP/inst_w\[31:0\]} \
+{/TESTBED/My_SP/mem_addr\[11:0\]} \
+{/TESTBED/My_SP/mem_din\[31:0\]} \
+{/TESTBED/My_SP/mem_dout\[31:0\]} \
+{/TESTBED/My_SP/mem_wen} \
+{/TESTBED/My_SP/opcode\[5:0\]} \
+{/TESTBED/My_SP/out_valid} \
+{/TESTBED/My_SP/ra1\[4:0\]} \
+{/TESTBED/My_SP/ra2\[4:0\]} \
+{/TESTBED/My_SP/rd1\[31:0\]} \
+{/TESTBED/My_SP/rd2\[31:0\]} \
+{/TESTBED/My_SP/rd\[4:0\]} \
+{/TESTBED/My_SP/rs\[4:0\]} \
+{/TESTBED/My_SP/rst_n} \
+{/TESTBED/My_SP/rt\[4:0\]} \
+{/TESTBED/My_SP/shamt\[4:0\]} \
+{/TESTBED/My_SP/state_typ_r\[5:0\]} \
+{/TESTBED/My_SP/state_typ_w\[5:0\]} \
+{/TESTBED/My_SP/wa\[4:0\]} \
+{/TESTBED/My_SP/wd\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \
+           18 19 20 21 22 23 24 25 26 27 28 29 )} 
+wvSetPosition -win $_nWave1 {("G1" 29)}
+wvGetSignalClose -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvResizeWindow -win $_nWave1 2225 161 1547 819
+wvResizeWindow -win $_nWave1 1920 23 1920 1009
+wvResizeWindow -win $_nWave1 1920 23 1920 1009
+wvSetCursor -win $_nWave1 299.787993 -snap {("G1" 10)}
+wvSelectSignal -win $_nWave1 {( "G1" 10 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvResizeWindow -win $_nWave1 1920 23 1920 1009
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 9 )} 
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 11 )} 
+wvSaveSignal -win $_nWave1 \
+           "/home/raid7_2/user09/r09115/CO_project_release/signal.rc"
+wvSaveSignal -win $_nWave1 \
+           "/home/raid7_2/user09/r09115/CO_project_release/signal.rc"
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 8 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 7 )} 

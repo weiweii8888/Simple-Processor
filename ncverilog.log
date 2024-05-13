@@ -1,0 +1,77 @@
+ncverilog: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s084: Started on Jan 26, 2023 at 03:21:18 CST
+ncverilog
+	TESTBED.v
+	+define+ALL
+	+access+rw
+	+notimingcheck
+Recompiling... reason: file './SP.v' is newer than expected.
+	expected: Thu Jan 26 03:21:01 2023
+	actual:   Thu Jan 26 03:21:18 2023
+file: TESTBED.v
+	module worklib.SP:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+    $readmemh("instruction.txt",instruction);
+                                          |
+ncelab: *W,MEMODR (./PATTERN.v,50|42): $readmem default memory order incompatible with IEEE1364.
+    $readmemh("mem.txt",mem);
+                          |
+ncelab: *W,MEMODR (./PATTERN.v,51|26): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x1b864a44>
+			streams:  14, words: 43168
+		worklib.SP:v <0x78eac4a5>
+			streams:   9, words: 11500
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  4       4
+		Primitives:              80       2
+		Timing outputs:          32       1
+		Registers:              120     120
+		Scalar wires:            42       -
+		Expanded wires:          76       3
+		Vectored wires:          11       -
+		Always blocks:            6       6
+		Initial blocks:           7       7
+		Cont. assignments:        4      13
+		Pseudo assignments:       1       1
+		Timing checks:          187       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'SP.fsdb'
+*Verdi* : Begin traversing the scope (TESTBED), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+ncsim: *W,RMEMAR: $readmem warning: address incremented out of range. Too many data words read
+	at line 308 of file "instruction.txt". Current address: 307, address range: [0:306].
+            File: ./PATTERN.v, line = 50, pos = 42
+           Scope: TESTBED.My_PATTERN
+            Time: 0 FS + 0
+
+
+
+        ----------------------------               
+        --                        --       |__||  
+        --  Congratulations !!    --      / O.O  | 
+        --                        --    /_____   | 
+        --  [0;32mSimulation PASS!![m     --   /^ ^ ^ \  |
+        --                        --  |^ ^ ^ ^ |w| 
+        ----------------------------   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 10735 NS + 0
+./PATTERN.v:417 		$finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s084: Exiting on Jan 26, 2023 at 03:21:21 CST  (total: 00:00:03)
